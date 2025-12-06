@@ -39,14 +39,11 @@ public class Helicopter extends javax.swing.JFrame {
         areaClearLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         msgArea.setColumns(20);
         msgArea.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         msgArea.setRows(5);
         jScrollPane1.setViewportView(msgArea);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 370, 110));
 
         slider.setMajorTickSpacing(10);
         slider.setOrientation(javax.swing.JSlider.VERTICAL);
@@ -54,7 +51,6 @@ public class Helicopter extends javax.swing.JFrame {
         slider.setPaintTicks(true);
         slider.setSnapToTicks(true);
         slider.setValue(0);
-        getContentPane().add(slider, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 70, 240));
 
         txtSlider.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtSlider.setText("0");
@@ -63,11 +59,9 @@ public class Helicopter extends javax.swing.JFrame {
                 txtSliderActionPerformed(evt);
             }
         });
-        getContentPane().add(txtSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 90, 40));
 
         btn2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn2.setText("Ammo");
-        getContentPane().add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 90, 30));
 
         btn1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn1.setText("Shoot");
@@ -76,15 +70,12 @@ public class Helicopter extends javax.swing.JFrame {
                 btn1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 90, 30));
 
         btn3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn3.setText("Missile");
-        getContentPane().add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 90, 30));
 
         btn4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn4.setText("Army");
-        getContentPane().add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 90, 30));
 
         sendMsgField.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         sendMsgField.addActionListener(new java.awt.event.ActionListener() {
@@ -92,16 +83,71 @@ public class Helicopter extends javax.swing.JFrame {
                 sendMsgFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(sendMsgField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 260, 40));
 
         sendBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         sendBtn.setText("Send");
-        getContentPane().add(sendBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 70, 40));
 
         areaClearLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         areaClearLabel.setForeground(new java.awt.Color(255, 0, 0));
         areaClearLabel.setText("Area is Not Clear");
-        getContentPane().add(areaClearLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 220, 40));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(areaClearLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(txtSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(sendMsgField, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(sendBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(80, 80, 80)
+                .addComponent(slider, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(areaClearLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sendMsgField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sendBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(slider, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
