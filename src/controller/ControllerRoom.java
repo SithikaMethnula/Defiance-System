@@ -11,5 +11,6 @@ package controller;
 public class ControllerRoom {
     String name;
     String id;
+    String address;
     
 }
