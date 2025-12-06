@@ -9,5 +9,7 @@ package controller;
  * @author USER
  */
 public class ControllerRoom {
+    String name;
+    String id;
     
 }
